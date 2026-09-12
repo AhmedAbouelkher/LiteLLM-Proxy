@@ -8,5 +8,7 @@ ENV PORT=4000
 ENV NUM_WORKERS=1
 ENV MALLOC_ARENA_MAX=2
 
+EXPOSE 4000
+
 ENTRYPOINT []
 CMD ["sh", "-c", "exec litellm --config /app/config.yaml --port ${PORT} --host 0.0.0.0 --num_workers 1"]
